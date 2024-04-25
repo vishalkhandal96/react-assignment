@@ -1,12 +1,13 @@
 import "./App.css";
 
 import Navbar from "./components/Navbar/Navbar";
-import Search from "./components/Search/Search";
+import NavbarMenu from "./components/NavbarMenu/NavbarMenu";
 
 function App() {
   return (
     <>
       <Navbar />
+      <NavbarMenu />
     </>
   );
 }
