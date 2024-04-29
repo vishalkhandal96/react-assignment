@@ -1,52 +1,86 @@
-// import React from "react";
+import React from "react";
 
-import "./NavbarMenu.css";
-import logo_light from "../../assets/images/logo-black.png";
-import logo_dark from "../../assets/images/logo-white.png";
-import search_icon_light from "../../assets/images/search-w.png";
-import search_icon_dark from "../../assets/images/search-b.png";
-import toggle_light from "../../assets/images/night.png";
-import toggle_dark from "../../assets/images/day.png";
-
-const NavbarMenu = ({ theme, setTheme }) => {
-  const toggle_mode = () => {
-    theme == "light" ? setTheme("dark") : setTheme("light");
-  };
+function NavbarMenu() {
   return (
-    <div>
-      <div className="navbar">
-        <img
-          className="logo"
-          src={theme == "light" ? logo_light : logo_dark}
-          alt=""
-          srcset=""
-        />
-        <ul>
-          <li>Home</li>
-          <li>Shop</li>
-          <li>Category</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-        <div className="search-box">
-          <input type="text" placeholder="Search" />
-          <img
-            src={theme == "light" ? search_icon_light : search_icon_dark}
-            alt=""
-            srcset=""
-          />
-        </div>
-        <img
-          onClick={() => {
-            toggle_mode();
-          }}
-          className="toggle-icon"
-          src={theme == "light" ? toggle_light : toggle_dark}
-          alt=""
-        />
-      </div>
+    <div className="bg-gradient-to-br from-indigo-500 to-pink-700 via-blue-800 antialiased bg-no-repeat text-white h-screen">
+      <header className="container mx-auto px-4 py-6 flex items-center justify-between">
+        <a href="/" className="font-bold text-white text-xl">
+          Pipe
+        </a>
+        <nav>
+          <ul className="flex items-center justify-center font-semibold">
+            <li className="relative group px3 py-2">
+              <button className="hover:opacity-50 cursor-default">
+                Products
+              </button>
+              <div className="absolute top-0 left-0 transition"></div>
+            </li>
+            <li className="relative group px3 py-2">
+              <button className="hover:opacity-50 cursor-default">
+                Products
+              </button>
+              <div className="absolute top-0 left-0 transition"></div>
+            </li>
+            <li className="relative group px3 py-2">
+              <button className="hover:opacity-50 cursor-default">
+                Products
+              </button>
+              <div className="absolute top-0 left-0 transition"></div>
+            </li>
+            <li className="relative group px3 py-2">
+              <button className="hover:opacity-50 cursor-default">
+                Products
+              </button>
+              <div className="absolute top-0 left-0 transition"></div>
+            </li>
+            <li className="relative group px3 py-2">
+              <button className="hover:opacity-50 cursor-default">
+                Products
+              </button>
+              <div className="absolute top-0 left-0 transition"></div>
+            </li>
+            <li className="relative group px3 py-2">
+              <button className="hover:opacity-50 cursor-default">
+                Products
+              </button>
+              <div className="absolute top-0 left-0 transition"></div>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href=""
+                className="rounded-full px-3 py-2 font-semibold bg-white bg-opacity-10 flex items-center group"
+              >
+                <span className="mr-2">Sign in</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 stroke-current"
+                  aria-hidden="true"
+                >
+                  <g>
+                    <path className="opacity-0 group-hover:opacity-100 duration-200"></path>
+                    <path
+                      className="opacity-100 group-hover:transform group-hover:translate-x-1 transition ease-in-out duration-200"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
   );
-};
+}
 
 export default NavbarMenu;
